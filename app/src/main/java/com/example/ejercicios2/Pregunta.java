@@ -6,6 +6,7 @@ public class Pregunta {
 
     private int A;
     private int B;
+    private int S;
     private String operador;
     private String[] operandos = {"+", "-", "*", "/"};
 
@@ -38,7 +39,9 @@ public class Pregunta {
                 respuesta = A * B;
                 break;
             case "/":
-                respuesta = A / B;
+                S = A * B;
+                B = S / A;
+                respuesta = B;
                 break;
 
         }
